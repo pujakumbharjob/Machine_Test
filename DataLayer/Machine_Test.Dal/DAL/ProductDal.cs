@@ -150,8 +150,7 @@ namespace Machine_Test.Dal
         {
             List<ProductUpdateDto> result = new List<ProductUpdateDto>();
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString);
-            SqlCommand cmd = new SqlCommand("select * from (select ProductId, ProductAttribute, ProductDetails, IsActive from  MachineTest) MT" +
-                "PIVOT(max(ProductDetails) for ProductAttribute in ([Name],[Price])) PD where IsActive = 1", con);
+            SqlCommand cmd = new SqlCommand("select * from (select ProductId, ProductAttribute, ProductDetails, IsActive from  MachineTest) MT PIVOT(max(ProductDetails) for ProductAttribute in ([Name],[Price])) PD where IsActive = 1", con);
               con.Open();
             SqlDataReader dr = cmd.ExecuteReader();
             while (dr.Read())

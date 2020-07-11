@@ -45,5 +45,19 @@
     <Compile Include="Persister\ProductPersister.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DataLayer\Machine_Test.Dal\Machine_Test.Dal.csproj">
+      <Project>{8bf5fa15-af85-4d87-9a68-00177dcbf27c}</Project>
+      <Name>Machine_Test.Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DataLayer\Machine_Test.IDal\Machine_Test.IDal.csproj">
+      <Project>{43ad371b-fc30-4f27-b924-4a4854ecb631}</Project>
+      <Name>Machine_Test.IDal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Model\Machine_Test.Model\Machine_Test.Model.csproj">
+      <Project>{53ca2754-bd80-48a8-a132-ac9ffe3348f1}</Project>
+      <Name>Machine_Test.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

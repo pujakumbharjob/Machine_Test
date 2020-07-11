@@ -190,6 +190,16 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BusinessLayer\Machine_Test.Persister\Machine_Test.Persister.csproj">
+      <Project>{77bf1897-e6bc-4ff5-bf33-64426daa2219}</Project>
+      <Name>Machine_Test.Persister</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Model\Machine_Test.Model\Machine_Test.Model.csproj">
+      <Project>{53ca2754-bd80-48a8-a132-ac9ffe3348f1}</Project>
+      <Name>Machine_Test.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
